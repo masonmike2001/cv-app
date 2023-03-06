@@ -1,40 +1,34 @@
 import React, { Component } from "react";
 import "./App.css";
-import Profile from "./components/Profile";
-import Education from "./components/Education";
-import Work from "./components/Work";
+import uniqid from "uniqid";
+import Form from "./components/Form";
+import CV from "./components/CV";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      name: "",
+      email: "",
+      phone: "",
+      schoolName: "",
+      schoolField: "",
+      studyRange: { schoolStart: "", schoolEnd: "", isAttending: "" },
+      workName: "",
+      workTitle: "",
+      workTask: { text: "", id: uniqid() },
+      workTasks: [],
+    };
   }
-
-  // Layout:
-  // ----------------------------
-  // Profile info        Output
-  // Education              ||
-  // Experience             ||
-  // Output                 \/
-  // ---------------------------
 
   render() {
     return (
       <div id="holder">
         <div id="left">
-          <form>
-            <Profile />
-            <hr />
-            <Education />
-            <hr />
-            <Work />
-            <hr />
-          </form>
-          <button type="submit">Submit</button>
+          <Form />
         </div>
         <div id="right">
-          <p>This is your lovely CV...</p>
-          <h1>{this.name}</h1>
+          <CV />
         </div>
       </div>
     );

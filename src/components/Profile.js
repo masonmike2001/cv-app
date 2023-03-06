@@ -1,34 +1,25 @@
 import React, { Component } from "react";
 
 class Profile extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      name: "",
-      email: "",
-      phone: "",
+      name: this.props.name,
+      email: this.props.email,
+      phone: this.props.phone,
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = (e) => {
-    switch (e.target.id) {
-      case "name":
-        this.setState({ name: e.target.value });
-        console.log(this.state);
-        break;
-      case "email":
-        this.setState({ email: e.target.value });
-        break;
-      case "phone":
-        this.setState({ phone: e.target.value });
-        break;
-      default:
-        break;
-    }
-  };
+  handleChange(e) {
+    this.props.onChange(e);
+  }
 
   render() {
-    const { name, email, phone } = this.state;
+    console.log(this.props.email);
+    const name = this.props.name;
+    const email = this.props.email;
+    const phone = this.props.phone;
     return (
       <fieldset>
         <legend>Profile:</legend>

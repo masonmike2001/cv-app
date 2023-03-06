@@ -1,38 +1,6 @@
 import React, { Component } from "react";
 
 class Education extends Component {
-  constructor() {
-    super();
-    this.state = {
-      schoolName: "",
-      schoolField: "",
-      studyRange: { schoolStart: "", schoolEnd: "", isAttending: "" },
-    };
-  }
-
-  handleChange = (e) => {
-    switch (e.target.id) {
-      case "schoolName":
-        this.setState({ schoolName: e.target.value });
-        console.log(this.state);
-        break;
-      case "schoolField":
-        this.setState({ schoolField: e.target.value });
-        break;
-      case "schoolStart":
-        this.setState({ schoolStart: e.target.value });
-        break;
-      case "schoolEnd":
-        this.setState({ schoolEnd: e.target.value });
-        break;
-      case "isAttending":
-        this.setState({ isAttending: e.target.value });
-        break;
-      default:
-        break;
-    }
-  };
-
   render() {
     const { schoolName, schoolField, studyRange } = this.state;
     return (
