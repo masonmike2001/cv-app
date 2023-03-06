@@ -1,5 +1,7 @@
 html {
     padding: 10px;
+    background-color: #222325;
+    color: #eaeaea;
 }
 
 .App {
@@ -9,12 +11,6 @@ html {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -28,17 +24,49 @@ html {
   color: white;
 }
 
+button {
+  width: 30%;
+  display: block;
+  margin: auto;
+}
+button:hover {
+  background-color: rgb(255, 255, 255);
+  color: #282c34;
+  cursor: pointer;
+}
+
 .App-link {
   color: #61dafb;
 }
 
 #holder {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+#left {
+  width: 50%;
 }
 
-#left {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+#right {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 3px;
+
+}
+
+
+
+fieldset {
+  display: grid;
+  grid-template: .5fr/ 1fr 2fr ;
+  gap: 5px;
+  padding: 10px;
+  border: none;
+
+}
+
+legend {
+  margin: 10px -20px;
+  font-weight: bold;
 }
