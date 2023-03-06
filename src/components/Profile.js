@@ -3,11 +3,6 @@ import React, { Component } from "react";
 class Profile extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: this.props.name,
-      email: this.props.email,
-      phone: this.props.phone,
-    };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -16,7 +11,6 @@ class Profile extends Component {
   }
 
   render() {
-    console.log(this.props.email);
     const name = this.props.name;
     const email = this.props.email;
     const phone = this.props.phone;

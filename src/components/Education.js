@@ -1,8 +1,19 @@
 import React, { Component } from "react";
 
 class Education extends Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    this.props.onChange(e);
+  }
+
   render() {
-    const { schoolName, schoolField, studyRange } = this.state;
+    const schoolName = this.props.schoolName;
+    const schoolField = this.props.schoolField;
+    // const studyRange = this.props.studyRange;
     return (
       <fieldset>
         <legend>Education:</legend>
@@ -18,10 +29,10 @@ class Education extends Component {
         <input
           type="schoolField"
           value={schoolField}
-          id="text"
+          id="schoolField"
           onChange={this.handleChange}
         />
-
+        {/* 
         <label htmlFor="schoolStart">Start Date: </label>
         <input
           type="date"
@@ -42,7 +53,7 @@ class Education extends Component {
           value={studyRange.isAttending}
           id="isAttending"
           onChange={this.handleChange}
-        />
+        /> */}
       </fieldset>
     );
   }

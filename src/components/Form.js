@@ -7,25 +7,19 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
-    // this.onEmailChange = this.onEmailChange.bind(this);
-    // this.onPhoneChange = this.onPhoneChange.bind(this);
-    this.state = {
-      name: "",
-      email: "",
-      phone: "",
-    };
   }
 
   onChange = (e) => {
-    console.log(e);
-    console.log(e.target.id);
-    this.setState({ [e.target.id]: e.target.value });
+    this.props.handleChanges(e);
   };
 
   render() {
-    const name = this.state.name;
-    const email = this.state.email;
-    const phone = this.state.phone;
+    const name = this.props.name;
+    const email = this.props.email;
+    const phone = this.props.phone;
+    const schoolName = this.props.schoolName;
+    const schoolField = this.props.schoolField;
+    // const studyRange = this.props.studyRange;
     return (
       <div>
         <form>
@@ -35,13 +29,14 @@ class Form extends Component {
             phone={phone}
             onChange={this.onChange}
           />
-          {/* <Education />
-          <Work /> */}
+          <Education
+            schoolName={schoolName}
+            schoolField={schoolField}
+            // studyRange={studyRange}
+            onChange={this.onChange}
+          />
+          {/* <Work /> */}
         </form>
-        <h1>Your name is: {this.state.name}</h1>
-        <h1>Your email is: {this.state.email}</h1>
-        <h1>Your phone is: {this.state.phone}</h1>
-        <button type="submit">Submit</button>
       </div>
     );
   }
