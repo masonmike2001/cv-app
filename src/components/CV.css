@@ -1,0 +1,52 @@
+html {
+    margin: 0;
+}
+
+
+#profile-head>div>h1 {
+    margin-top: 0;
+    padding: 20px;
+    font-size: 3rem;
+}
+#profile-head {
+    background-color: rgb(0, 165, 146);
+    margin: 0;
+
+    color: rgb(227, 227, 232);
+    padding-bottom: 2px;
+    
+
+}
+
+#profile-head>ul>li>h3, .list {
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+#profile-head>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#CV-body {
+    padding: 20px;
+}
+
+#profile-head>p {
+
+    padding: 5px;
+}
+
+.alt-color {
+    background-color: rgb(227, 227, 232);
+    color: rgb(35, 35, 35);
+
+}
+
+.logo {
+    width: 150px;
+    border-radius: 240px;
+    margin: 20px;
+    border: white dashed 2px;
+}
