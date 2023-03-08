@@ -25,6 +25,7 @@ class Form extends Component {
 
   render() {
     const name = this.props.name;
+    const summary = this.props.summary;
     const email = this.props.email;
     const phone = this.props.phone;
     const schoolName = this.props.schoolName;
@@ -36,9 +37,13 @@ class Form extends Component {
     return (
       <div>
         <h1>CV Creator</h1>
+        <a href="https://github.com/masonmike2001">
+          https://github.com/masonmike2001
+        </a>
         <form>
           <Profile
             name={name}
+            summary={summary}
             email={email}
             phone={phone}
             onChange={this.onChange}

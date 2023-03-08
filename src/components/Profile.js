@@ -12,6 +12,7 @@ class Profile extends Component {
 
   render() {
     const name = this.props.name;
+    const summary = this.props.summary;
     const email = this.props.email;
     const phone = this.props.phone;
     return (
@@ -22,6 +23,14 @@ class Profile extends Component {
           type="text"
           value={name}
           id="name"
+          onChange={this.handleChange}
+        />
+        <label htmlFor="summary">Summary: </label>
+        <textarea
+          value={summary}
+          id="summary"
+          rows="8"
+          cols="50"
           onChange={this.handleChange}
         />
         <label htmlFor="email">Email: </label>

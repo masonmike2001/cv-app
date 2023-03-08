@@ -60,7 +60,7 @@ class CV extends Component {
           >
             Summary
           </p>
-          <h4 className="list">{summary}</h4>
+          <p className="list">{summary}</p>
         </div>
         <div id="CV-body">
           <div>
