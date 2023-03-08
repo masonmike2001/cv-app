@@ -9,15 +9,15 @@ class App extends Component {
     super();
     this.handleChanges = this.handleChanges.bind(this);
     this.state = {
-      name: "",
-      email: "",
-      phone: "",
-      schoolName: "",
-      schoolField: "",
-      studyRange: { schoolStart: "", schoolEnd: "", isAttending: "" },
-      // workName: "",
-      // workTitle: "",
-      // workTask: { text: "", id: uniqid() },
+      name: "Gizmo Gecko",
+      email: "gizmo@geicko.com",
+      phone: "(508) 324-5906",
+      schoolName: "University of Massachusetts",
+      schoolField: "B.S. in Geckommunications",
+      studyRange: { schoolStart: new Date(), schoolEnd: "", isAttending: "" },
+      workName: "Geicko",
+      workTitle: "Insurance Salesgecko Extraordinaire",
+      workTask: { text: "", id: uniqid() },
       // workTasks: [],
     };
   }
@@ -34,6 +34,9 @@ class App extends Component {
     const phone = this.state.phone;
     const schoolName = this.state.schoolName;
     const schoolField = this.state.schoolField;
+    const workName = this.state.workName;
+    const workTitle = this.state.workTitle;
+    const workTask = this.state.workTask;
     // const studyRange = this.props.studyRange;
     return (
       <div id="holder">
@@ -45,6 +48,9 @@ class App extends Component {
             schoolName={schoolName}
             schoolField={schoolField}
             // studyRange={studyRange}
+            workName={workName}
+            workTitle={workTitle}
+            workTask={workTask}
             handleChanges={this.handleChanges}
           />
           <button type="submit">Submit</button>
@@ -60,6 +66,9 @@ class App extends Component {
             schoolName={schoolName}
             schoolField={schoolField}
             // studyRange={studyRange}
+            workName={workName}
+            workTitle={workTitle}
+            workTask={workTask}
           />
         </div>
       </div>

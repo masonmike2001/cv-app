@@ -1,8 +1,19 @@
 import React, { Component } from "react";
 
 class Work extends Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    this.props.onChange(e);
+  }
+
   render() {
-    const { workName, workTitle, workTask, workTasks } = this.state;
+    const workName = this.props.workName;
+    const workTitle = this.props.workTitle;
+    const workTask = this.props.workTask;
     return (
       <fieldset>
         <legend>Work:</legend>

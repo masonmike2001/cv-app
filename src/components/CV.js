@@ -10,24 +10,38 @@ class CV extends Component {
     const phone = this.props.phone;
     const schoolName = this.props.schoolName;
     const schoolField = this.props.schoolField;
+    const workName = this.props.workName;
+    const workTitle = this.props.workTitle;
+    const workTask = this.props.workName;
     // const studyRange = this.props.studyRange;
 
     return (
       <div>
         <div>
           <h1>{name}</h1>
-          <h2>{email}</h2>
+          <h3>{email}</h3>
           <h3>{phone}</h3>
         </div>
         <hr />
         <div>
-          <h4>Education:</h4>
-          <h3>
-            {schoolName} ({schoolField})
-          </h3>
+          <h4>Experience:</h4>
+          <ul>
+            <li>
+              <h3>
+                {workTitle} at {workName}
+              </h3>
+            </li>
+          </ul>
         </div>
         <div>
-          <h4>Experience:</h4>
+          <h4>Education:</h4>
+          <ul>
+            <li>
+              <h3>
+                {schoolName} ({schoolField})
+              </h3>
+            </li>
+          </ul>
         </div>
       </div>
     );

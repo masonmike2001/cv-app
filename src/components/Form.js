@@ -20,6 +20,9 @@ class Form extends Component {
     const schoolName = this.props.schoolName;
     const schoolField = this.props.schoolField;
     // const studyRange = this.props.studyRange;
+    const workName = this.props.workName;
+    const workTitle = this.props.workTitle;
+    const workTask = this.props.workTask;
     return (
       <div>
         <form>
@@ -35,7 +38,7 @@ class Form extends Component {
             // studyRange={studyRange}
             onChange={this.onChange}
           />
-          {/* <Work /> */}
+          <Work workName={workName} workTitle={workTitle} workTask={workTask} />
         </form>
       </div>
     );
