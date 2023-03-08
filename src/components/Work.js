@@ -31,13 +31,13 @@ class Work extends Component {
           id="workTitle"
           onChange={this.handleChange}
         />
-        <label htmlFor="workTask">Tasks (separated by commas): </label>
+        {/* <label htmlFor="workTask">Tasks (separated by commas): </label>
         <input
           type="text"
           value={workTask}
           id="workTask"
           onChange={this.handleChange}
-        />
+        /> */}
       </fieldset>
     );
   }

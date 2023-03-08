@@ -29,8 +29,6 @@ class App extends Component {
   }
 
   handleChanges = (e) => {
-    console.log(e);
-    console.log(e.target.id);
     this.setState({ [e.target.id]: e.target.value });
   };
 
@@ -47,7 +45,7 @@ class App extends Component {
     const workTask = this.state.workTask;
     return (
       <div id="holder">
-        <div id="left">
+        <div id="left" className="hidden">
           <Form
             name={name}
             summary={summary}
@@ -61,12 +59,8 @@ class App extends Component {
             workTask={workTask}
             handleChanges={this.handleChanges}
           />
-          <button type="submit">Submit</button>
-          {/* <h1>Your name is: {this.state.name}</h1>
-          <h1>Your email is: {this.state.email}</h1>
-          <h1>Your phone is: {this.state.phone}</h1> */}
         </div>
-        <div id="right">
+        <div id="right" className="focus">
           <CV
             name={name}
             summary={summary}

@@ -13,6 +13,16 @@ class Form extends Component {
     this.props.handleChanges(e);
   };
 
+  editToggle() {
+    //show left
+    document.querySelector("#left").classList.add("hidden");
+    //center right
+    document.querySelector("#right").classList.add("focus");
+
+    document.querySelector("#edit").classList.remove("hidden");
+    document.querySelector("#f-edit").classList.add("hidden");
+  }
+
   render() {
     const name = this.props.name;
     const email = this.props.email;
@@ -25,6 +35,7 @@ class Form extends Component {
     const workTask = this.props.workTask;
     return (
       <div>
+        <h1>CV Creator</h1>
         <form>
           <Profile
             name={name}
@@ -32,14 +43,20 @@ class Form extends Component {
             phone={phone}
             onChange={this.onChange}
           />
+          <hr />
           <Education
             schoolName={schoolName}
             schoolField={schoolField}
             // studyRange={studyRange}
             onChange={this.onChange}
           />
+          <hr />
           <Work workName={workName} workTitle={workTitle} workTask={workTask} />
+          <hr />
         </form>
+        <button id="f-edit" onClick={this.editToggle}>
+          Finish Editing
+        </button>
       </div>
     );
   }

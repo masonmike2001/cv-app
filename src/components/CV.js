@@ -6,6 +6,18 @@ class CV extends Component {
   constructor(props) {
     super(props);
   }
+
+  editToggle() {
+    //show left
+    document.querySelector("#left").classList.remove("hidden");
+    //center right
+    document.querySelector("#right").classList.remove("focus");
+
+    document.querySelector("#edit").classList.add("hidden");
+
+    document.querySelector("#f-edit").classList.remove("hidden");
+  }
+
   render() {
     const name = this.props.name;
     const summary = this.props.summary;
@@ -23,9 +35,11 @@ class CV extends Component {
         <div id="profile-head">
           <div>
             <h1>{name}</h1>
-            <img src={logo} className="logo"></img>
+            <img src={logo} className="logo" alt="profile"></img>
           </div>
-
+          <button id="edit" onClick={this.editToggle}>
+            Edit
+          </button>
           <p
             className="
           alt-color"
@@ -46,7 +60,7 @@ class CV extends Component {
           >
             Summary
           </p>
-          <h4 class="list">{summary}</h4>
+          <h4 className="list">{summary}</h4>
         </div>
         <div id="CV-body">
           <div>
